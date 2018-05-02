@@ -4,7 +4,7 @@ def start_exercise(exercise_name):
 
 def choose_lesson_menu():
     while True:
-        print('1. Liczba mnoja',
+        print('1. Liczba mnoga',
               '2. Stopniowanie przymiotników',
               '3. Wyjść',
               sep='\n',
