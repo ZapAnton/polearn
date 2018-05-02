@@ -85,3 +85,4 @@ książę - ksiażęta
 ręka - ręce
 oko - oczy
 ucho - uszy
+pomyłka - pomylki
