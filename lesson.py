@@ -11,7 +11,9 @@ class Mistake:
         self.user_answer = user_answer
 
     def __str__(self):
-        return 'Pytanie: {} Odpowiedź: {} Wasz odpowiedź: {}'\
+        return ("Pytanie: \033[1;36m'{}'\x1b[0m " +
+                "Odpowiedź: \033[0;32m'{}'\x1b[0m " +
+                "Wasz odpowiedź: \033[1;31m'{}'\x1b[0m")\
             .format(self.question, self.answer, self.user_answer)
 
 
@@ -58,9 +60,10 @@ class Lesson:
                 break
 
             if user_answer == answer_value:
-                print('\tPoprawnie!')
+                print('\t\033[0;32mPoprawnie!\x1b[0m')
             else:
-                print('\tPomyłka! Prawidłowy odpowiedź: {}'
+                print(('\t\033[1;31mPomyłka!\x1b[0m Prawidłowy odpowiedź: ' +
+                       '\033[0;32m{}\x1b[0m')
                       .format(answer_value))
 
                 mistake = Mistake(question_value, answer_value, user_answer)
@@ -79,6 +82,6 @@ class Lesson:
 
         print('\nPomyłki:')
         for i, mistake in enumerate(self.mistakes):
-            print('\t{}. {}'.format(i, mistake))
+            print('\t{}. {}'.format(i + 1, mistake))
         else:
             print('\n')
