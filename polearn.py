@@ -1,5 +1,10 @@
-def start_exercise(exercise_name):
-    print(exercise_name)
+from lesson import Lesson
+
+
+def start_lesson(lesson_name):
+    lesson = Lesson(lesson_name)
+
+    lesson.start()
 
 
 def choose_lesson_menu():
@@ -17,14 +22,14 @@ def choose_lesson_menu():
         try:
             user_input = int(input('> '))
         except ValueError:
-            print('Powinniście wpisać cyfre!')
+            print('\nPowinniście wpisać cyfre!\n')
 
             continue
 
         if user_input == 1:
-            start_exercise('liczba_mnoga')
+            start_lesson('liczba_mnoga')
         elif user_input == 2:
-            start_exercise('stopniowanie')
+            start_lesson('stopniowanie')
         elif user_input == 3:
             print('Do widzenia!')
 
