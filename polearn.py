@@ -10,7 +10,7 @@ def start_lesson(lesson_name):
 def choose_lesson_menu():
     while True:
         print('1. Liczba mnoga',
-              '2. Stopniowanie przymiotników',
+              '2. Tłumaczenie',
               '3. Wyjść',
               sep='\n',
               end='\n\n')
@@ -29,7 +29,7 @@ def choose_lesson_menu():
         if user_input == 1:
             start_lesson('liczba_mnoga')
         elif user_input == 2:
-            start_lesson('stopniowanie')
+            start_lesson('tłumaczenie')
         elif user_input == 3:
             print('Do widzenia!')
 
